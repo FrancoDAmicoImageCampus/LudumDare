@@ -1,5 +1,621 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 555119605042173
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Fondo1",
+					"sid": 647700279508399,
+					"parameters": {
+						"object": "Boton",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Boton",
+					"sid": 375684900828265,
+					"parameters": {
+						"instance-variable": "TextoAMostrar",
+						"value": "\"AAAAAAAAAAAAA aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+					}
+				}
+			],
+			"sid": 108994828411773
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Sprite2",
+					"sid": 642700525316218,
+					"parameters": {
+						"object": "Boton"
+					}
+				},
+				{
+					"id": "is-moving-along-path",
+					"objectClass": "Sprite2",
+					"sid": 739143423210688,
+					"behaviorType": "Pathfinding",
+					"isInverted": true
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 228931193747474
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Boton",
+					"sid": 420661189101323,
+					"parameters": {
+						"object": "Text",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 162291262041217,
+					"parameters": {
+						"text": "Boton.TextoAMostrar"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "Text",
+					"sid": 971774145814964,
+					"parameters": {
+						"object": "Sprite",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Text",
+					"sid": 225496753500109,
+					"parameters": {
+						"x": "Text.X-925",
+						"y": "Text.Y-85"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "Text",
+					"sid": 785814322287933,
+					"parameters": {
+						"width": "1900"
+					}
+				}
+			],
+			"sid": 681168733647181
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Sprite2",
+					"sid": 546684134798042,
+					"parameters": {
+						"object": "Boton"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 612955778072523
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Text",
+					"sid": 553624702102451
+				}
+			],
+			"sid": 406963927912657
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "Text",
+					"sid": 139110144933933
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite",
+					"sid": 355830972287537,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 764543856267054
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "Text",
+					"sid": 363475998422956,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite",
+					"sid": 106869149892626,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 882638116325620
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "Text",
+					"sid": 636324033124500
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite",
+					"sid": 363928153525345,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 240403249324759
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pez",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 291267810037953,
+							"parameters": {
+								"interval-seconds": "0.65"
+							}
+						},
+						{
+							"id": "is-mirrored",
+							"objectClass": "Sprite2",
+							"sid": 500820151090585,
+							"isInverted": true
+						},
+						{
+							"id": "is-moving-along-path",
+							"objectClass": "Sprite2",
+							"sid": 603055294951480,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Sprite2",
+							"sid": 701666581969875,
+							"parameters": {
+								"object": "BurbujasProta1",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "BurbujasProta1",
+							"sid": 140466646550657,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "Sprite2.Angle+180"
+							}
+						}
+					],
+					"sid": 362544490292646
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 707237685980820,
+							"parameters": {
+								"interval-seconds": "0.65"
+							}
+						},
+						{
+							"id": "is-mirrored",
+							"objectClass": "Sprite2",
+							"sid": 678004768378330
+						},
+						{
+							"id": "is-moving-along-path",
+							"objectClass": "Sprite2",
+							"sid": 321319244448134,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Sprite2",
+							"sid": 153263021805327,
+							"parameters": {
+								"object": "BurbujasProta1",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "BurbujasProta1",
+							"sid": 714283297532964,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "Sprite2.Angle+180"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "BurbujasProta1",
+							"sid": 500092239847207,
+							"parameters": {
+								"angle": "choose(0, 90, 180, 270)"
+							}
+						}
+					],
+					"sid": 549068623151408
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 492486752904007,
+							"parameters": {
+								"interval-seconds": "2"
+							}
+						},
+						{
+							"id": "is-moving-along-path",
+							"objectClass": "Sprite2",
+							"sid": 471551445235222,
+							"behaviorType": "Pathfinding",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Sprite2",
+							"sid": 188711497882075,
+							"parameters": {
+								"object": "BurbujasProta1",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "BurbujasProta1",
+							"sid": 352721929883537,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "Sprite2.Angle"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "BurbujasProta1",
+							"sid": 415159280601134,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "50"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "BurbujasProta1",
+							"sid": 604753879529271,
+							"parameters": {
+								"angle": "choose(0, 90, 180, 270)"
+							}
+						}
+					],
+					"sid": 131466348031048
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 907609360615757,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "find-path",
+							"objectClass": "Sprite2",
+							"sid": 263010412306466,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						}
+					],
+					"sid": 671133698943802
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-path-found",
+							"objectClass": "Sprite2",
+							"sid": 848835738166024,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "move-along-path",
+							"objectClass": "Sprite2",
+							"sid": 371948857679883,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"sid": 918709600324531
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "Sprite2",
+							"sid": 703110912347047,
+							"parameters": {
+								"first-angle": "269",
+								"second-angle": "90"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sprite2",
+							"sid": 569789116030407,
+							"parameters": {
+								"animation": "\"Animation 1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 778930688002886
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "Sprite2",
+							"sid": 340745858321003,
+							"parameters": {
+								"first-angle": "269",
+								"second-angle": "90"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sprite2",
+							"sid": 779759550816311,
+							"parameters": {
+								"animation": "\"Animation 2\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 946465042461887
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving-along-path",
+							"objectClass": "Sprite2",
+							"sid": 262919044308492,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-active",
+							"objectClass": "Sprite2",
+							"sid": 413873045071939,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 951983882611882
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving-along-path",
+							"objectClass": "Sprite2",
+							"sid": 481676061849204,
+							"behaviorType": "Pathfinding",
+							"isInverted": true
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Sprite2",
+							"sid": 703396643655801,
+							"parameters": {
+								"animation": "\"Animation 1\""
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 831631137244864
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "Sprite2",
+							"sid": 582390858362182,
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 169398881514997
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving-along-path",
+							"objectClass": "Sprite2",
+							"sid": 788744057217318,
+							"behaviorType": "Pathfinding",
+							"isInverted": true
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Sprite2",
+							"sid": 877396093275425,
+							"parameters": {
+								"animation": "\"Animation 2\""
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 883968023561281
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "Sprite2",
+							"sid": 503451527610189,
+							"parameters": {
+								"angle": "180"
+							}
+						}
+					],
+					"sid": 133486397069706
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving-along-path",
+							"objectClass": "Sprite2",
+							"sid": 638406812055634,
+							"behaviorType": "Pathfinding",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-active",
+							"objectClass": "Sprite2",
+							"sid": 490827347866597,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						}
+					],
+					"sid": 205425844435917
+				}
+			],
+			"sid": 848572571176059
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Sprite2",
+					"sid": 540469169210773,
+					"parameters": {
+						"animation": "\"Animation 1\""
+					}
+				},
+				{
+					"id": "is-moving-along-path",
+					"objectClass": "Sprite2",
+					"sid": 291638991967917,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [],
+			"sid": 252177571808980
+		}
+	],
 	"sid": 855708693418916
 }

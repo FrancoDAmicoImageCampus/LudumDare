@@ -1,5 +1,5 @@
 {
-	"name": "Layout 1",
+	"name": "Layout 2",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -15,13 +15,13 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 5,
-					"sid": 593428819031545,
+					"uid": 8,
+					"sid": 636455118932988,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 593428819031545,
+						"sid": 636455118932988,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -47,21 +47,63 @@
 					}
 				},
 				{
-					"type": "Sprite",
+					"type": "Boton",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 7,
-					"sid": 659585025350966,
+					"uid": 9,
+					"sid": 884624930934306,
+					"tags": "",
+					"instanceVariables": {
+						"TextoAMostrar": ""
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 884624930934306,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -543,
+						"y": 535,
+						"width": 78.0384520605067,
+						"height": 78.0384520605067,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 11,
+					"sid": 765563019580450,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 659585025350966,
+						"sid": 765563019580450,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -87,7 +129,7 @@
 					}
 				},
 				{
-					"type": "Sprite2",
+					"type": "BurbujasProta1",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -95,57 +137,98 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 4,
-					"sid": 842841723168955,
+					"uid": 6,
+					"sid": 692234243928939,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
-						"Pathfinding": {
+						"Fade": {
 							"properties": {
-								"cell-size": 30,
-								"cell-border": -1,
-								"obstacles": "solids",
-								"max-speed": 500,
-								"acceleration": 300,
-								"deceleration": 2000,
-								"rotate-speed": 500,
-								"rotate-object": true,
-								"diagonals": true,
-								"direct-movement": "to-destination",
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 150,
+								"acceleration": 0,
+								"gravity": -500,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
 								"enabled": true
 							}
 						},
 						"Sine": {
 							"properties": {
-								"movement": "angle",
-								"wave": "sine",
-								"period": 2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 10,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Sine2": {
-							"properties": {
 								"movement": "size",
 								"wave": "sine",
-								"period": 5,
+								"period": 10,
 								"period-random": 0,
 								"period-offset": 0,
 								"period-offset-random": 0,
-								"magnitude": 5,
+								"magnitude": 50,
 								"magnitude-random": 0,
-								"enabled": true,
+								"enabled": false,
 								"live-preview": false
 							}
 						}
 					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 552,
+						"y": 194,
+						"width": 60.26745943431386,
+						"height": 58.638609179332406,
+						"originX": 0.5,
+						"originY": 0.5238095238095238,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text",
+					"properties": {
+						"text": "Prueba repo 1",
+						"enable-bbcode": true,
+						"font": "cursive",
+						"size": 16,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 10,
+					"sid": 741835802464707,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 842841723168955,
+						"sid": 741835802464707,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -154,12 +237,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 581,
-						"y": 766,
-						"width": 234.05127643317815,
-						"height": 234.05127643317815,
-						"originX": 0.3229317851959361,
-						"originY": 0.54644412191582,
+						"x": 46,
+						"y": 911,
+						"width": 455,
+						"height": 147,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -171,7 +254,7 @@
 					}
 				}
 			],
-			"sid": 764737436341689,
+			"sid": 135268679940199,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -205,7 +288,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 126136029201690,
+	"sid": 537246658964002,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 2000,
