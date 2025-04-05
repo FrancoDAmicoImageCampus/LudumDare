@@ -1,0 +1,25 @@
+# Archivos temporales y de caché generados por Construct 3
+*.swp
+*.bak
+*.log
+*.tmp
+*.user
+
+# Archivos de configuración del editor
+*.cbp
+*.suo
+*.userprefs
+
+# Archivos generados por Construct 3
+exported/
+
+# Carpeta de backups o guardados automáticos
+backup/
+
+# Archivos específicos de sistemas operativos
+.DS_Store           # Archivos ocultos de macOS
+Thumbs.db           # Archivos de Windows
+
+# Archivos de configuraciones de editores
+.idea/
+.vscode/
