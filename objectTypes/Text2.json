@@ -1,0 +1,16 @@
+{
+	"name": "Text2",
+	"plugin-id": "Text",
+	"sid": 523436782447309,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 665643462349133
+		}
+	],
+	"effectTypes": []
+}

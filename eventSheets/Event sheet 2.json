@@ -1,0 +1,75 @@
+{
+	"name": "Event sheet 2",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 134381338548945
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "Text2",
+					"sid": 519689604591936,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "270"
+					}
+				}
+			],
+			"sid": 879819329415160
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-fade-out-finished",
+					"objectClass": "FondoNegro",
+					"sid": 205354687805714,
+					"behaviorType": "Fade"
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 397134523551285,
+					"parameters": {
+						"seconds": "10",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "FondoNegro",
+					"sid": 767198159455416,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "5"
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "FondoNegro",
+					"sid": 418486787092726,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "0"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "FondoNegro",
+					"sid": 556417428196884,
+					"behaviorType": "Fade"
+				}
+			],
+			"sid": 470892814122883
+		}
+	],
+	"sid": 786561283828292
+}

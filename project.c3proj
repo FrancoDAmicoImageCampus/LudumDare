@@ -61,6 +61,20 @@
 			"name": "Sine",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "ahvle8zbcol",
@@ -73,7 +87,16 @@
 			"Boton",
 			"Sprite",
 			"Sprite2",
-			"BurbujasProta1"
+			"BurbujasProta1",
+			"Sprite3",
+			"FiltroAzul",
+			"LimiteMedusa",
+			"BarraDeVidaMarco",
+			"BarraDeVida",
+			"Muro",
+			"Objetivo",
+			"Text2",
+			"FondoNegro"
 		],
 		"subfolders": []
 	},
@@ -86,13 +109,15 @@
 	"layouts": {
 		"items": [
 			"Layout 1",
-			"Layout 2"
+			"Layout 2",
+			"Creditos"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"Event sheet 2"
 		],
 		"subfolders": []
 	},

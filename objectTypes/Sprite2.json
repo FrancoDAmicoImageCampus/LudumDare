@@ -20,6 +20,11 @@
 			"behaviorId": "Sin",
 			"name": "Sine2",
 			"sid": 865548629061237
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 536828897951195
 		}
 	],
 	"effectTypes": [],
@@ -61,6 +66,11 @@
 								"name": "Image Point 1",
 								"x": 0.7670537010159652,
 								"y": 0.4027576197387518
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.49709724238026126,
+								"y": 0.000725689404934688
 							}
 						],
 						"duration": 1,
@@ -111,6 +121,11 @@
 								"name": "Image Point 1",
 								"x": 0.7743105950653121,
 								"y": 0.5856313497822931
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.49709724238026126,
+								"y": 0.000725689404934688
 							}
 						],
 						"duration": 1,
@@ -160,6 +175,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 2",
+								"x": 0.49709724238026126,
+								"y": 0.000725689404934688
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -198,6 +220,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 2",
+								"x": 0.49709724238026126,
+								"y": 0.000725689404934688
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}
@@ -245,6 +274,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 2",
+								"x": 0.49709724238026126,
+								"y": 0.000725689404934688
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -283,6 +319,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 2",
+								"x": 0.49709724238026126,
+								"y": 0.000725689404934688
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}
