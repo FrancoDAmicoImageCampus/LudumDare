@@ -115,7 +115,7 @@
 					}
 				},
 				{
-					"type": "Sprite2",
+					"type": "Prota",
 					"properties": {
 						"initially-visible": false,
 						"initial-animation": "Animation 1",
@@ -126,7 +126,9 @@
 					"uid": 18,
 					"sid": 250776722630737,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"vida": 3
+					},
 					"behaviors": {
 						"Pathfinding": {
 							"properties": {
@@ -173,6 +175,18 @@
 						},
 						"ScrollTo": {
 							"properties": {
+								"enabled": true
+							}
+						},
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"allow-sliding": false,
+								"default-controls": true,
 								"enabled": true
 							}
 						}
