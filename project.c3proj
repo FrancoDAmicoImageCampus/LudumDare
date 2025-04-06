@@ -48,8 +48,22 @@
 		},
 		{
 			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Fade",
 			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -92,7 +106,7 @@
 			"Fondo1",
 			"Boton",
 			"Sprite",
-			"Sprite2",
+			"Prota",
 			"BurbujasProta1",
 			"Sprite3",
 			"FiltroAzul",
@@ -102,24 +116,38 @@
 			"Muro",
 			"Objetivo",
 			"Text2",
+<<<<<<< HEAD
 			"FondoNegro"
 =======
 			"Forma3D"
 >>>>>>> origin/main
+=======
+			"FondoNegro",
+			"Sprite4",
+			"PezGlobo",
+			"PezLamparita",
+			"Luz",
+			"Luz2",
+			"PezAbisalUbicacion1",
+			"PezAbisalUbicacion2"
+>>>>>>> 087efcd (Enemigos)
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"eNEMIGOS"
+		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
 			"Layout 1",
 			"Layout 2",
-			"Creditos"
+			"Creditos",
+			"Oscuridad"
 		],
 		"subfolders": []
 	},

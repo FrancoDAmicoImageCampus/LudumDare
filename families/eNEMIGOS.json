@@ -1,0 +1,13 @@
+{
+	"name": "eNEMIGOS",
+	"plugin-id": "Sprite",
+	"sid": 188156704120511,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Sprite3",
+		"PezGlobo",
+		"PezLamparita"
+	]
+}

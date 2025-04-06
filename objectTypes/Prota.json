@@ -1,10 +1,18 @@
 {
-	"name": "Sprite2",
+	"name": "Prota",
 	"plugin-id": "Sprite",
 	"sid": 201937879187129,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "vida",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 197292586489370
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Pathfinding",
@@ -25,6 +33,11 @@
 			"behaviorId": "scrollto",
 			"name": "ScrollTo",
 			"sid": 536828897951195
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 919624768947414
 		}
 	],
 	"effectTypes": [],
@@ -71,6 +84,11 @@
 								"name": "Image Point 2",
 								"x": 0.49709724238026126,
 								"y": 0.000725689404934688
+							},
+							{
+								"name": "Image Point 3",
+								"x": 0.5667634252539913,
+								"y": 0.4448476052249637
 							}
 						],
 						"duration": 1,
@@ -126,6 +144,11 @@
 								"name": "Image Point 2",
 								"x": 0.49709724238026126,
 								"y": 0.000725689404934688
+							},
+							{
+								"name": "Image Point 3",
+								"x": 0.5667634252539913,
+								"y": 0.4448476052249637
 							}
 						],
 						"duration": 1,
@@ -180,6 +203,11 @@
 								"name": "Image Point 2",
 								"x": 0.49709724238026126,
 								"y": 0.000725689404934688
+							},
+							{
+								"name": "Image Point 3",
+								"x": 0.5667634252539913,
+								"y": 0.4448476052249637
 							}
 						],
 						"duration": 1,
@@ -225,6 +253,11 @@
 								"name": "Image Point 2",
 								"x": 0.49709724238026126,
 								"y": 0.000725689404934688
+							},
+							{
+								"name": "Image Point 3",
+								"x": 0.5667634252539913,
+								"y": 0.4448476052249637
 							}
 						],
 						"duration": 1,
@@ -279,6 +312,11 @@
 								"name": "Image Point 2",
 								"x": 0.49709724238026126,
 								"y": 0.000725689404934688
+							},
+							{
+								"name": "Image Point 3",
+								"x": 0.5667634252539913,
+								"y": 0.4448476052249637
 							}
 						],
 						"duration": 1,
@@ -324,6 +362,11 @@
 								"name": "Image Point 2",
 								"x": 0.49709724238026126,
 								"y": 0.000725689404934688
+							},
+							{
+								"name": "Image Point 3",
+								"x": 0.5667634252539913,
+								"y": 0.4448476052249637
 							}
 						],
 						"duration": 1,

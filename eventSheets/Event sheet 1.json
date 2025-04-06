@@ -40,7 +40,7 @@
 			"conditions": [
 				{
 					"id": "is-overlapping-another-object",
-					"objectClass": "Sprite2",
+					"objectClass": "Prota",
 					"sid": 642700525316218,
 					"parameters": {
 						"object": "Boton"
@@ -48,7 +48,7 @@
 				},
 				{
 					"id": "is-moving-along-path",
-					"objectClass": "Sprite2",
+					"objectClass": "Prota",
 					"sid": 739143423210688,
 					"behaviorType": "Pathfinding",
 					"isInverted": true
@@ -114,7 +114,7 @@
 			"conditions": [
 				{
 					"id": "is-overlapping-another-object",
-					"objectClass": "Sprite2",
+					"objectClass": "Prota",
 					"sid": 546684134798042,
 					"parameters": {
 						"object": "Boton"
@@ -214,6 +214,86 @@
 			"sid": 240403249324759
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Prota",
+					"sid": 645171762676358,
+					"parameters": {
+						"object": "Objetivo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Objetivo",
+					"sid": 544939213048634,
+					"parameters": {
+						"object": "FondoNegro",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 961126498391683,
+					"parameters": {
+						"seconds": "3",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 840230113686295,
+					"parameters": {
+						"layout": "Creditos"
+					}
+				}
+			],
+			"sid": 224999865240235
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 312885619278928
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "FondoNegro",
+					"sid": 139425036484397
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "FondoNegro",
+					"sid": 239178942320536,
+					"parameters": {
+						"layer": "\"Textos\""
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "BarraDeVidaMarco",
+					"sid": 153492966085962,
+					"parameters": {
+						"where": "behind",
+						"object": "FondoNegro"
+					}
+				}
+			],
+			"sid": 637567892772638
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Pez",
@@ -233,13 +313,13 @@
 						},
 						{
 							"id": "is-mirrored",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 500820151090585,
 							"isInverted": true
 						},
 						{
 							"id": "is-moving-along-path",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 603055294951480,
 							"behaviorType": "Pathfinding"
 						}
@@ -247,7 +327,7 @@
 					"actions": [
 						{
 							"id": "spawn-another-object",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 701666581969875,
 							"parameters": {
 								"object": "BurbujasProta1",
@@ -263,7 +343,7 @@
 							"sid": 140466646550657,
 							"behaviorType": "Bullet",
 							"parameters": {
-								"angle": "Sprite2.Angle+180"
+								"angle": "Prota.Angle+180"
 							}
 						}
 					],
@@ -282,12 +362,12 @@
 						},
 						{
 							"id": "is-mirrored",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 678004768378330
 						},
 						{
 							"id": "is-moving-along-path",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 321319244448134,
 							"behaviorType": "Pathfinding"
 						}
@@ -295,7 +375,7 @@
 					"actions": [
 						{
 							"id": "spawn-another-object",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 153263021805327,
 							"parameters": {
 								"object": "BurbujasProta1",
@@ -311,7 +391,7 @@
 							"sid": 714283297532964,
 							"behaviorType": "Bullet",
 							"parameters": {
-								"angle": "Sprite2.Angle+180"
+								"angle": "Prota.Angle+180"
 							}
 						},
 						{
@@ -338,7 +418,7 @@
 						},
 						{
 							"id": "is-moving-along-path",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 471551445235222,
 							"behaviorType": "Pathfinding",
 							"isInverted": true
@@ -347,7 +427,7 @@
 					"actions": [
 						{
 							"id": "spawn-another-object",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 188711497882075,
 							"parameters": {
 								"object": "BurbujasProta1",
@@ -363,7 +443,7 @@
 							"sid": 352721929883537,
 							"behaviorType": "Bullet",
 							"parameters": {
-								"angle": "Sprite2.Angle"
+								"angle": "Prota.Angle"
 							}
 						},
 						{
@@ -402,7 +482,7 @@
 					"actions": [
 						{
 							"id": "find-path",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 263010412306466,
 							"behaviorType": "Pathfinding",
 							"parameters": {
@@ -418,7 +498,7 @@
 					"conditions": [
 						{
 							"id": "on-path-found",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 848835738166024,
 							"behaviorType": "Pathfinding"
 						}
@@ -426,7 +506,7 @@
 					"actions": [
 						{
 							"id": "move-along-path",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 371948857679883,
 							"behaviorType": "Pathfinding"
 						}
@@ -438,7 +518,7 @@
 					"conditions": [
 						{
 							"id": "is-between-angles",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 703110912347047,
 							"parameters": {
 								"first-angle": "269",
@@ -449,7 +529,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 569789116030407,
 							"parameters": {
 								"animation": "\"Animation 1\"",
@@ -464,7 +544,7 @@
 					"conditions": [
 						{
 							"id": "is-between-angles",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 340745858321003,
 							"parameters": {
 								"first-angle": "269",
@@ -476,7 +556,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 779759550816311,
 							"parameters": {
 								"animation": "\"Animation 2\"",
@@ -491,7 +571,7 @@
 					"conditions": [
 						{
 							"id": "is-moving-along-path",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 262919044308492,
 							"behaviorType": "Pathfinding"
 						}
@@ -499,7 +579,7 @@
 					"actions": [
 						{
 							"id": "set-active",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 413873045071939,
 							"behaviorType": "Sine",
 							"parameters": {
@@ -514,14 +594,14 @@
 					"conditions": [
 						{
 							"id": "is-moving-along-path",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 481676061849204,
 							"behaviorType": "Pathfinding",
 							"isInverted": true
 						},
 						{
 							"id": "is-animation-playing",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 703396643655801,
 							"parameters": {
 								"animation": "\"Animation 1\""
@@ -536,7 +616,7 @@
 					"actions": [
 						{
 							"id": "set-angle",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 582390858362182,
 							"parameters": {
 								"angle": "0"
@@ -550,14 +630,14 @@
 					"conditions": [
 						{
 							"id": "is-moving-along-path",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 788744057217318,
 							"behaviorType": "Pathfinding",
 							"isInverted": true
 						},
 						{
 							"id": "is-animation-playing",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 877396093275425,
 							"parameters": {
 								"animation": "\"Animation 2\""
@@ -572,7 +652,7 @@
 					"actions": [
 						{
 							"id": "set-angle",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 503451527610189,
 							"parameters": {
 								"angle": "180"
@@ -586,7 +666,7 @@
 					"conditions": [
 						{
 							"id": "is-moving-along-path",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 638406812055634,
 							"behaviorType": "Pathfinding",
 							"isInverted": true
@@ -595,7 +675,7 @@
 					"actions": [
 						{
 							"id": "set-active",
-							"objectClass": "Sprite2",
+							"objectClass": "Prota",
 							"sid": 490827347866597,
 							"behaviorType": "Sine",
 							"parameters": {
@@ -609,11 +689,111 @@
 			"sid": 848572571176059
 		},
 		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Barra de vida",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 940246193849702
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "BarraDeVidaMarco",
+							"sid": 629024245605091,
+							"disabled": true,
+							"parameters": {
+								"x": "Prota.ImagePointX(2)",
+								"y": "Prota.ImagePointY(2)"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "BarraDeVidaMarco",
+							"sid": 458649253951465,
+							"disabled": true,
+							"parameters": {
+								"angle": "Prota.Angle"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "BarraDeVida",
+							"sid": 230100865831219,
+							"parameters": {
+								"x": "BarraDeVidaMarco.ImagePointX(1)",
+								"y": "BarraDeVidaMarco.ImagePointY(1)"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "BarraDeVida",
+							"sid": 493247233948791,
+							"disabled": true,
+							"parameters": {
+								"angle": "Prota.Angle"
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "BarraDeVida",
+							"sid": 374573325729043,
+							"parameters": {
+								"where": "behind",
+								"object": "BarraDeVidaMarco"
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "BarraDeVida",
+							"sid": 179989197551362,
+							"parameters": {
+								"width": "105 * Prota.vida"
+							}
+						}
+					],
+					"sid": 748541352706587
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Prota",
+							"sid": 492989933645097,
+							"parameters": {
+								"instance-variable": "vida",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 330061960631221
+						}
+					],
+					"sid": 334395478118559
+				}
+			],
+			"sid": 883958101544165
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "is-animation-playing",
-					"objectClass": "Sprite2",
+					"objectClass": "Prota",
 					"sid": 540469169210773,
 					"parameters": {
 						"animation": "\"Animation 1\""
@@ -621,13 +801,48 @@
 				},
 				{
 					"id": "is-moving-along-path",
-					"objectClass": "Sprite2",
+					"objectClass": "Prota",
 					"sid": 291638991967917,
 					"behaviorType": "Pathfinding"
 				}
 			],
 			"actions": [],
 			"sid": 252177571808980
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemigos - Danio",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Prota",
+							"sid": 102159469578850,
+							"parameters": {
+								"object": "eNEMIGOS"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Prota",
+							"sid": 468245829795462,
+							"parameters": {
+								"instance-variable": "vida",
+								"value": "-1"
+							}
+						}
+					],
+					"sid": 224936690755732
+				}
+			],
+			"sid": 539057350089948
 		},
 		{
 			"eventType": "group",
@@ -734,7 +949,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Barra de vida",
+			"title": "Pez globo",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -742,143 +957,657 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "is-animation-playing",
+							"objectClass": "PezGlobo",
+							"sid": 275030975019192,
+							"parameters": {
+								"animation": "\"Animation 1\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PezGlobo",
+							"sid": 946974156218058,
+							"parameters": {
+								"instance-variable": "Inflandose",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 875246503095105,
+							"parameters": {
+								"seconds": "PezGlobo.TiempoParaInflarse",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PezGlobo",
+							"sid": 515900567765565,
+							"parameters": {
+								"animation": "\"Animation 2\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PezGlobo",
+							"sid": 621567603651677,
+							"parameters": {
+								"instance-variable": "Inflandose",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 996718219626731
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PezGlobo",
+							"sid": 908770325957443,
+							"parameters": {
+								"instance-variable": "Inflandose",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 589104935418674
+						}
+					],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "PezGlobo",
+							"sid": 870704855015061,
+							"parameters": {
+								"width": "222.416276",
+								"height": "222.416276"
+							}
+						}
+					],
+					"sid": 149545551358856
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "PezGlobo",
+							"sid": 908878216222824,
+							"parameters": {
+								"animation": "\"Animation 2\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PezGlobo",
+							"sid": 148959473406023,
+							"parameters": {
+								"instance-variable": "Inflandose",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 371949880433820,
+							"parameters": {
+								"seconds": "PezGlobo.TiempoInflado",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PezGlobo",
+							"sid": 753340172387931,
+							"parameters": {
+								"animation": "\"Animation 1\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PezGlobo",
+							"sid": 432809842861915,
+							"parameters": {
+								"instance-variable": "Inflandose",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 131530171716127
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PezGlobo",
+							"sid": 966689670966481,
+							"parameters": {
+								"instance-variable": "Inflandose",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 437029085999244
+						}
+					],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "PezGlobo",
+							"sid": 260299102675249,
+							"parameters": {
+								"width": "500",
+								"height": "500"
+							}
+						}
+					],
+					"sid": 617330991440819
+				}
+			],
+			"sid": 836793857511532
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pez luz",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 138800287299459
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "PezLamparita",
+							"sid": 805701210557490,
+							"parameters": {
+								"object": "Luz",
+								"layer": "\"Luz\"",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Prota",
+							"sid": 883838199380348,
+							"parameters": {
+								"object": "Luz2",
+								"layer": "\"Luz\"",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 370664857598143
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "every-tick",
 							"objectClass": "System",
-							"sid": 889294851573680
+							"sid": 516833033617082
 						}
 					],
 					"actions": [
 						{
 							"id": "set-position",
-							"objectClass": "BarraDeVidaMarco",
-							"sid": 553307377628015,
-							"disabled": true,
+							"objectClass": "Luz",
+							"sid": 862114846799628,
 							"parameters": {
-								"x": "Sprite2.ImagePointX(2)",
-								"y": "Sprite2.ImagePointY(2)"
-							}
-						},
-						{
-							"id": "set-angle",
-							"objectClass": "BarraDeVidaMarco",
-							"sid": 951715375876383,
-							"disabled": true,
-							"parameters": {
-								"angle": "Sprite2.Angle"
+								"x": "PezLamparita.X",
+								"y": "PezLamparita.Y"
 							}
 						},
 						{
 							"id": "set-position",
-							"objectClass": "BarraDeVida",
-							"sid": 537164463600686,
+							"objectClass": "Luz2",
+							"sid": 380777507554798,
 							"parameters": {
-								"x": "BarraDeVidaMarco.ImagePointX(1)",
-								"y": "BarraDeVidaMarco.ImagePointY(1)"
+								"x": "Prota.ImagePointX(3)",
+								"y": "Prota.ImagePointY(3)"
 							}
 						},
 						{
-							"id": "set-angle",
-							"objectClass": "BarraDeVida",
-							"sid": 264883235344429,
-							"disabled": true,
+							"id": "move-to-layer",
+							"objectClass": "Luz2",
+							"sid": 537790285632220,
 							"parameters": {
-								"angle": "Sprite2.Angle"
-							}
-						},
-						{
-							"id": "move-to-object",
-							"objectClass": "BarraDeVida",
-							"sid": 581243523897686,
-							"parameters": {
-								"where": "behind",
-								"object": "BarraDeVidaMarco"
+								"layer": "\"Luz\""
 							}
 						}
 					],
-					"sid": 989233603954171
-				}
-			],
-			"sid": 959060610006389
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Sprite2",
-					"sid": 189974783453858,
-					"parameters": {
-						"object": "Objetivo"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "spawn-another-object",
-					"objectClass": "Objetivo",
-					"sid": 737000823099723,
-					"parameters": {
-						"object": "FondoNegro",
-						"layer": "0",
-						"image-point": "0",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
+					"sid": 456708404688446
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 735897217235473,
-					"parameters": {
-						"seconds": "3",
-						"use-timescale": true
-					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 262634575867061,
-					"parameters": {
-						"layout": "Creditos"
-					}
+					"eventType": "group",
+					"disabled": false,
+					"title": "Movimiento 1",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-path-found",
+									"objectClass": "PezLamparita",
+									"sid": 402591527418352,
+									"behaviorType": "Pathfinding"
+								}
+							],
+							"actions": [
+								{
+									"id": "move-along-path",
+									"objectClass": "PezLamparita",
+									"sid": 781902253553776,
+									"behaviorType": "Pathfinding"
+								}
+							],
+							"sid": 350996877124174
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 620209000646880
+								}
+							],
+							"actions": [],
+							"sid": 541780727247215
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 992549520556377,
+									"parameters": {
+										"interval-seconds": "0.1"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PezLamparita",
+									"sid": 706151722121907,
+									"parameters": {
+										"instance-variable": "Nadando1Persiguiendo2",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "find-path",
+									"objectClass": "PezLamparita",
+									"sid": 172171701149186,
+									"behaviorType": "Pathfinding",
+									"parameters": {
+										"x": "PezAbisalUbicacion1.X",
+										"y": "PezAbisalUbicacion1.Y"
+									}
+								}
+							],
+							"sid": 931375218283777
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "PezLamparita",
+									"sid": 186544982176760,
+									"parameters": {
+										"object": "PezAbisalUbicacion1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PezLamparita",
+									"sid": 393170587204240,
+									"parameters": {
+										"instance-variable": "Nadando1Persiguiendo2",
+										"value": "1.5"
+									}
+								}
+							],
+							"sid": 795595495227519
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 550269583279720,
+									"parameters": {
+										"interval-seconds": "0.1"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PezLamparita",
+									"sid": 242365416493174,
+									"parameters": {
+										"instance-variable": "Nadando1Persiguiendo2",
+										"comparison": 0,
+										"value": "1.5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "find-path",
+									"objectClass": "PezLamparita",
+									"sid": 346515601521256,
+									"behaviorType": "Pathfinding",
+									"parameters": {
+										"x": "PezAbisalUbicacion2.X",
+										"y": "PezAbisalUbicacion2.Y"
+									}
+								}
+							],
+							"sid": 367222193671161
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "PezLamparita",
+									"sid": 376586217470597,
+									"parameters": {
+										"object": "PezAbisalUbicacion2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PezLamparita",
+									"sid": 528316986678926,
+									"parameters": {
+										"instance-variable": "Nadando1Persiguiendo2",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 410251542713889
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-angles",
+									"objectClass": "PezLamparita",
+									"sid": 874824388854290,
+									"parameters": {
+										"first-angle": "270",
+										"second-angle": "90"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PezLamparita",
+									"sid": 716340183532138,
+									"parameters": {
+										"animation": "\"Animation 1\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 607669096489754
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-angles",
+									"objectClass": "PezLamparita",
+									"sid": 570885442765543,
+									"parameters": {
+										"first-angle": "270",
+										"second-angle": "90"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PezLamparita",
+									"sid": 688747505525995,
+									"parameters": {
+										"animation": "\"Animation 2\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 425874838786715
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "PezLamparita",
+									"sid": 304033249934688,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "Prota",
+										"image-point": "0"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 762512948909185
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PezLamparita",
+									"sid": 914225972819797,
+									"parameters": {
+										"instance-variable": "Nadando1Persiguiendo2",
+										"value": "2+PezLamparita.Nadando1Persiguiendo2"
+									}
+								}
+							],
+							"sid": 364830528117805
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PezLamparita",
+									"sid": 594503737891198,
+									"parameters": {
+										"instance-variable": "Nadando1Persiguiendo2",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 814265850044614,
+									"parameters": {
+										"interval-seconds": "0.1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "find-path",
+									"objectClass": "PezLamparita",
+									"sid": 594396586929947,
+									"behaviorType": "Pathfinding",
+									"parameters": {
+										"x": "Prota.X",
+										"y": "Prota.Y"
+									}
+								}
+							],
+							"sid": 831666842379493
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PezLamparita",
+									"sid": 651746041229295,
+									"parameters": {
+										"instance-variable": "Nadando1Persiguiendo2",
+										"comparison": 0,
+										"value": "3.5"
+									}
+								},
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 350070827718767,
+									"parameters": {
+										"interval-seconds": "0.1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "find-path",
+									"objectClass": "PezLamparita",
+									"sid": 544426126043712,
+									"behaviorType": "Pathfinding",
+									"parameters": {
+										"x": "Prota.X",
+										"y": "Prota.Y"
+									}
+								}
+							],
+							"sid": 949191800508405
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "PezLamparita",
+									"sid": 182963379520612,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "Prota",
+										"image-point": "0"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PezLamparita",
+									"sid": 426507034530269,
+									"parameters": {
+										"instance-variable": "Nadando1Persiguiendo2",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PezLamparita",
+									"sid": 324864496029980,
+									"parameters": {
+										"instance-variable": "Nadando1Persiguiendo2",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 688534296576029
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "PezLamparita",
+									"sid": 524780962194016,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "Prota",
+										"image-point": "0"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PezLamparita",
+									"sid": 136277531665179,
+									"parameters": {
+										"instance-variable": "Nadando1Persiguiendo2",
+										"comparison": 0,
+										"value": "3.5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PezLamparita",
+									"sid": 789613162950165,
+									"parameters": {
+										"instance-variable": "Nadando1Persiguiendo2",
+										"value": "1.5"
+									}
+								}
+							],
+							"sid": 261545793418145
+						}
+					],
+					"sid": 672147186732804
 				}
 			],
-			"sid": 188446889896869
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 789057187184020
-				}
-			],
-			"actions": [
-				{
-					"id": "move-to-top",
-					"objectClass": "FondoNegro",
-					"sid": 918300409119632
-				},
-				{
-					"id": "move-to-layer",
-					"objectClass": "FondoNegro",
-					"sid": 701314787700170,
-					"parameters": {
-						"layer": "\"Textos\""
-					}
-				},
-				{
-					"id": "move-to-object",
-					"objectClass": "BarraDeVidaMarco",
-					"sid": 235073444233913,
-					"parameters": {
-						"where": "behind",
-						"object": "FondoNegro"
-					}
-				}
-			],
-			"sid": 457419004217524
+			"sid": 327058067820040
 		}
 	],
 	"sid": 855708693418916

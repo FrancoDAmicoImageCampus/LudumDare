@@ -1,0 +1,108 @@
+{
+	"name": "PezLamparita",
+	"plugin-id": "Sprite",
+	"sid": 262370367736039,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Nadando1Persiguiendo2",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 313800046831005
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 940914460536067
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 472825608553245
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 450,
+						"height": 450,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3927636,
+						"collisionPoly": {
+							"points": [
+								0.7822222222222223,
+								0.8111111111111112,
+								0.348888888888889,
+								0.8288888888888889,
+								0.3466666666666667,
+								0.33555555555555555,
+								0.7222222222222221,
+								0.3466666666666666
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 649066694798738,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 450,
+						"height": 450,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8728943,
+						"collisionPoly": {
+							"points": [
+								0.7222222222222221,
+								0.6533333333333333,
+								0.3466666666666667,
+								0.6644444444444444,
+								0.348888888888889,
+								0.1711111111111111,
+								0.7822222222222223,
+								0.18888888888888877
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 248163885471203,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
